@@ -10,7 +10,7 @@ public class ScraperTests {
 
 
     @Test
-    public  void GetListItemsFromScraping(){
+    public void GetListItemsFromScraping(){
         CustomAlert testAlert = new CustomAlert();
         Assertions.assertNotEquals(0,testAlert.ScrapeEbayForItems(5).size());
     }

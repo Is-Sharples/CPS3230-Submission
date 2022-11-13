@@ -101,7 +101,7 @@ public class CustomAlert {
         System.setProperty("webdriver.chrome.driver", "C:/Users/Drew/Desktop/WebTesting/chromedriver.exe");
         driver = StartDriver();
         CustomAlert test = new CustomAlert();
-        //Go to google and disable cookies dialog
+
         driver.get("https://www.ebay.com/");
         driver.switchTo().activeElement().sendKeys(Keys.TAB);
         driver.switchTo().activeElement().sendKeys(Keys.TAB);
@@ -117,7 +117,7 @@ public class CustomAlert {
         List<WebElement> listItem = driver.findElements(By.className("s-item"));
         ArrayList<CustomAlert> alerts = new ArrayList<CustomAlert>();
         ArrayList<CustomAlert> finalAlerts = new ArrayList<CustomAlert>();
-        System.out.println(listItem.size());
+
         for(int i = 0; i < range + 1;i++) {
             WebElement item = listItem.get(i);
             String url = item.findElement(By.tagName("a")).getAttribute("href");
